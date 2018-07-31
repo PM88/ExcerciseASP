@@ -3,29 +3,106 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <h1>Web API Help Page</h1>
+    <!--
+    <a href="https://drive.google.com/open?id=1Vrx7MsI4P308hxJUiA12lDnFVxzTyVN1">Click here to view the list of requests, their schemas and examples</a>
+    -->
+    <p></p>
+    <div class="panel panel-default">
+        <div class="panel-body">Below are API requests and some examples in json.</div>
+    </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center" colspan="2">-Adresses-</th>
+            </tr>
+        </thead>
+        <tr>
+            <th>Command</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>GetAll</td>
+            <td>api/Addresses</td>
+        </tr>
+        <tr>
+            <td>Get</td>
+            <td>
+                api/Addresses/{customerId}/AddressType/{addressTypeId} <br />
+                api/Addresses/cust1/AddressType/I
+            </td>
+        </tr>
+        <tr>
+            <td>Post</td>
+            <td>
+                api/Addresses<br />
+                {<br />
+                "customerId": "Cust1",<br />
+                "name": "John Smith",<br />
+                "addressTypeId": "S",<br />
+                "countryCode": "AE"<br />
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Put</td>
+            <td>
+                api/Addresses<br />
+                {<br />
+                "customerId": "Cust1",<br />
+                "name": "John Smith",<br />
+                "addressTypeId": "S",<br />
+                "street": "New Street"
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Delete</td>
+            <td>
+                api/Addresses/{customerId}/AddressType/{addressTypeId}<br />
+                api/Addresses/cust1/S
+            </td>
+        </tr>
+    </table>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center" colspan="2">-Customers-</th>
+            </tr>
+        </thead>
+        <tr>
+            <th>Command</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>GetAll</td>
+            <td>api/Customers</td>
+        </tr>
+        <tr>
+            <td>Get</td>
+            <td>
+                api/Customers/{customerId}/Name/{name}<br />
+                api/Customers/cust1/Name/John Smith
+            </td>
+        </tr>
+        <tr>
+            <td>Post</td>
+            <td>
+                api/Customers<br />
+                {<br />
+                "customerId": "Cust4",<br />
+                "name": "John New",<br />
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Delete</td>
+            <td>
+                api/Customers/{customerId}/Name/{name}<br />
+                api/Customers/cust4/Name/John New
+            </td>
+        </tr>
+    </table>
 </div>
